@@ -3,7 +3,7 @@ const HRranges = { low: [25, 40], mediumLow: [40, 50], normal: [50, 90], lowHigh
 const RRranges = { low: [3, 8], mediumLow: [8, 11], normal: [11, 20], mediumHigh: [20, 24], high: [24, 60] };
 
 function calculateTempScore(temp) {
-    console.log(temp);
+    ;
     if (temp >= tempRanges.low[0] && temp <= tempRanges.low[1]) {
         return 3;
     } else if (temp > tempRanges.mediumLow[0] && temp <= tempRanges.mediumLow[1]) {
@@ -50,9 +50,7 @@ function calculateRRScore(RR) {
 }
 
 function calulateNEWScore(tempScore, HRscore, RRscore) {
-    console.log(tempScore, HRscore, RRscore);
     let score = tempScore + HRscore + RRscore;
-    console.log(score);
     return score
 }
 

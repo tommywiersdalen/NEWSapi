@@ -11,14 +11,6 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
 
-app.get('/status', (req, res) => {
-    const status = {
-        status: 'OK',
-        timestamp: new Date(),
-    };
-    res.send(status);
-});
-
 app.post('/NEWSscore', (req, res) => {
     const measurements = req.body;
     const score = caluclateScore(measurements);
